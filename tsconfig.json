@@ -1,0 +1,25 @@
+{
+    "extends": "astro/tsconfigs/strict",
+    "compilerOptions": {
+        "strict": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"],
+            "@components/*": ["src/components/*"],
+            "@layouts/*": ["src/layouts/*"],
+            "@pages/*": ["src/pages/*"],
+            "@assets/*": ["src/assets/*"],
+            "@utils/*": ["src/utils/*"],
+            "@config": ["src/config"]
+        },
+        "types": ["astro/client"],
+
+        // "types": ["astro/client", "@astrojs/starlight/types"],
+        "jsx": "react-jsx",
+        "jsxImportSource": "preact",
+        "verbatimModuleSyntax": true
+        // "esModuleInterop": true
+    },
+    "include": [".astro/types.d.ts", "**/*"],
+    "exclude": ["node_modules", "dist"]
+}
